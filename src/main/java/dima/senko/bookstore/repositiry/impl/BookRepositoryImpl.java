@@ -2,20 +2,18 @@ package dima.senko.bookstore.repositiry.impl;
 
 import dima.senko.bookstore.model.Book;
 import dima.senko.bookstore.repositiry.BookRepository;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-
 @Repository
 public class BookRepositoryImpl implements BookRepository {
     private final SessionFactory sessionFactory;
 
-    public BookRepositoryImpl(SessionFactory sessionFactory)
-    {
+    public BookRepositoryImpl(SessionFactory sessionFactory) {
         this.sessionFactory = sessionFactory;
     }
 
