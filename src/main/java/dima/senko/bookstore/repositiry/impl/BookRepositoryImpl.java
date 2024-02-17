@@ -3,24 +3,23 @@ package dima.senko.bookstore.repositiry.impl;
 import dima.senko.bookstore.model.Book;
 import dima.senko.bookstore.repositiry.BookRepository;
 import java.util.List;
+import java.util.Optional;
+import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import org.springframework.stereotype.Repository;
 
+@RequiredArgsConstructor
+@Repository
 public class BookRepositoryImpl implements BookRepository {
     private final SessionFactory sessionFactory;
 
-    public BookRepositoryImpl(SessionFactory sessionFactory) {
-        this.sessionFactory = sessionFactory;
-    }
-
     @Override
     public Book save(Book book) {
-        Session session = null;
         Transaction transaction = null;
-        try {
-            session = sessionFactory.openSession();
+        try (Session session = sessionFactory.openSession()) {
             transaction = session.beginTransaction();
             session.save(book);
             transaction.commit();
@@ -29,10 +28,6 @@ public class BookRepositoryImpl implements BookRepository {
                 transaction.rollback();
             }
             throw new RuntimeException("Can't insert book: " + book, e);
-        } finally {
-            if (session != null) {
-                session.close();
-            }
         }
         return book;
     }
@@ -44,6 +39,14 @@ public class BookRepositoryImpl implements BookRepository {
             return query.getResultList();
         } catch (Exception e) {
             throw new RuntimeException("Can't get all books", e);
+        }
+    }
+
+    @Override
+    public Optional<Book> findBookById(Long id) {
+        try (Session session = sessionFactory.openSession()) {
+            Book book = session.find(Book.class, id);
+            return Optional.ofNullable(book);
         }
     }
 }

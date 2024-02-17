@@ -1,10 +1,14 @@
 package dima.senko.bookstore.service;
 
-import dima.senko.bookstore.model.Book;
+import dima.senko.bookstore.dto.BookDto;
+import dima.senko.bookstore.dto.CreateBookRequestDto;
 import java.util.List;
 
 public interface BookService {
-    Book save(Book book);
 
-    List<Book> findAll();
+    BookDto save(CreateBookRequestDto book);
+
+    List<BookDto> findAll();
+
+    BookDto findBookById(Long id);
 }
