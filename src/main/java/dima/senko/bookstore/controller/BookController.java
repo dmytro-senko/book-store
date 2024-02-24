@@ -1,6 +1,7 @@
 package dima.senko.bookstore.controller;
 
 import dima.senko.bookstore.dto.BookDto;
+import dima.senko.bookstore.dto.BookSearchParametersDto;
 import dima.senko.bookstore.dto.CreateBookRequestDto;
 import dima.senko.bookstore.service.BookService;
 import java.util.List;
@@ -43,5 +44,10 @@ public class BookController {
     @DeleteMapping("{id}")
     public BookDto deleteBook(@PathVariable Long id) {
         return bookService.delete(id);
+    }
+
+    @GetMapping("/search")
+    public List<BookDto> searchBooks(BookSearchParametersDto searchParameters) {
+        return bookService.searchBooks(searchParameters);
     }
 }
