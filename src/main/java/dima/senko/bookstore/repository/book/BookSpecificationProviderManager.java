@@ -1,9 +1,9 @@
-package dima.senko.bookstore.repositiry.book;
+package dima.senko.bookstore.repository.book;
 
 import dima.senko.bookstore.exception.SpecificationProviderManagerException;
 import dima.senko.bookstore.model.Book;
-import dima.senko.bookstore.repositiry.SpecificationProvider;
-import dima.senko.bookstore.repositiry.SpecificationProviderManager;
+import dima.senko.bookstore.repository.SpecificationProvider;
+import dima.senko.bookstore.repository.SpecificationProviderManager;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;

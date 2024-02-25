@@ -1,4 +1,4 @@
-package dima.senko.bookstore.repositiry.book;
+package dima.senko.bookstore.repository.book;
 
 import dima.senko.bookstore.model.Book;
 import org.springframework.data.jpa.repository.JpaRepository;

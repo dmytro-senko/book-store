@@ -1,4 +1,4 @@
-package dima.senko.bookstore.repositiry;
+package dima.senko.bookstore.repository;
 
 import org.springframework.data.jpa.domain.Specification;
 

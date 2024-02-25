@@ -1,14 +1,14 @@
-package dima.senko.bookstore.repositiry.book;
+package dima.senko.bookstore.repository.book;
 
-import static dima.senko.bookstore.repositiry.book.spec.AuthorSpecification.AUTHOR;
-import static dima.senko.bookstore.repositiry.book.spec.IsbnSpecification.ISBN;
-import static dima.senko.bookstore.repositiry.book.spec.PriceSpecification.PRICE;
-import static dima.senko.bookstore.repositiry.book.spec.TitleSpecification.TITLE;
+import static dima.senko.bookstore.repository.book.spec.AuthorSpecification.AUTHOR;
+import static dima.senko.bookstore.repository.book.spec.IsbnSpecification.ISBN;
+import static dima.senko.bookstore.repository.book.spec.PriceSpecification.PRICE;
+import static dima.senko.bookstore.repository.book.spec.TitleSpecification.TITLE;
 
 import dima.senko.bookstore.dto.BookSearchParametersDto;
 import dima.senko.bookstore.model.Book;
-import dima.senko.bookstore.repositiry.SpecificationBuilder;
-import dima.senko.bookstore.repositiry.SpecificationProviderManager;
+import dima.senko.bookstore.repository.SpecificationBuilder;
+import dima.senko.bookstore.repository.SpecificationProviderManager;
 import java.util.Objects;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.jpa.domain.Specification;
