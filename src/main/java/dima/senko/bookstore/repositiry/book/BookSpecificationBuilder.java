@@ -1,5 +1,10 @@
 package dima.senko.bookstore.repositiry.book;
 
+import static dima.senko.bookstore.repositiry.book.spec.AuthorSpecification.AUTHOR;
+import static dima.senko.bookstore.repositiry.book.spec.IsbnSpecification.ISBN;
+import static dima.senko.bookstore.repositiry.book.spec.PriceSpecification.PRICE;
+import static dima.senko.bookstore.repositiry.book.spec.TitleSpecification.TITLE;
+
 import dima.senko.bookstore.dto.BookSearchParametersDto;
 import dima.senko.bookstore.model.Book;
 import dima.senko.bookstore.repositiry.SpecificationBuilder;
@@ -19,22 +24,22 @@ public class BookSpecificationBuilder implements SpecificationBuilder<Book> {
         Specification<Book> specification = Specification.where(null);
         String[] authors = parameters.authors();
         if (Objects.nonNull(authors) && authors.length > 0) {
-            specification = specification.and(manager.getSpecification("author")
+            specification = specification.and(manager.getSpecification(AUTHOR)
                     .getSpecification(authors));
         }
         String[] price = parameters.price();
         if (Objects.nonNull(price) && price.length > 0) {
-            specification = specification.and(manager.getSpecification("price")
+            specification = specification.and(manager.getSpecification(PRICE)
                     .getSpecification(price));
         }
         String[] titles = parameters.titles();
         if (Objects.nonNull(titles) && titles.length > 0) {
-            specification = specification.and(manager.getSpecification("titles")
+            specification = specification.and(manager.getSpecification(TITLE)
                     .getSpecification(titles));
         }
         String[] isbn = parameters.isbn();
         if (Objects.nonNull(isbn) && isbn.length > 0) {
-            specification = specification.and(manager.getSpecification("isbn")
+            specification = specification.and(manager.getSpecification(ISBN)
                     .getSpecification(isbn));
         }
         return specification;

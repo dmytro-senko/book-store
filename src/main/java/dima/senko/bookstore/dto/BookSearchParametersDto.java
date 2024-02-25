@@ -7,4 +7,3 @@ public record BookSearchParametersDto(
         String[] isbn
 ) {
 }
-
