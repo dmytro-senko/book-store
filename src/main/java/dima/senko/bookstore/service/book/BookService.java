@@ -1,8 +1,8 @@
-package dima.senko.bookstore.service;
+package dima.senko.bookstore.service.book;
 
-import dima.senko.bookstore.dto.BookDto;
-import dima.senko.bookstore.dto.BookSearchParametersDto;
-import dima.senko.bookstore.dto.CreateBookRequestDto;
+import dima.senko.bookstore.dto.book.BookDto;
+import dima.senko.bookstore.dto.book.BookSearchParametersDto;
+import dima.senko.bookstore.dto.book.CreateBookRequestDto;
 import java.util.List;
 import org.springframework.data.domain.Pageable;
 

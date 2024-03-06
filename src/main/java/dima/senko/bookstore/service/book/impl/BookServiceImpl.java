@@ -1,14 +1,14 @@
-package dima.senko.bookstore.service.impl;
+package dima.senko.bookstore.service.book.impl;
 
-import dima.senko.bookstore.dto.BookDto;
-import dima.senko.bookstore.dto.BookSearchParametersDto;
-import dima.senko.bookstore.dto.CreateBookRequestDto;
+import dima.senko.bookstore.dto.book.BookDto;
+import dima.senko.bookstore.dto.book.BookSearchParametersDto;
+import dima.senko.bookstore.dto.book.CreateBookRequestDto;
 import dima.senko.bookstore.exception.EntityNotFoundException;
 import dima.senko.bookstore.mapper.BookMapper;
 import dima.senko.bookstore.model.Book;
 import dima.senko.bookstore.repository.SpecificationBuilder;
 import dima.senko.bookstore.repository.book.BookRepository;
-import dima.senko.bookstore.service.BookService;
+import dima.senko.bookstore.service.book.BookService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
