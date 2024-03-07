@@ -1,9 +1,9 @@
 package dima.senko.bookstore.controller;
 
-import dima.senko.bookstore.dto.BookDto;
-import dima.senko.bookstore.dto.BookSearchParametersDto;
-import dima.senko.bookstore.dto.CreateBookRequestDto;
-import dima.senko.bookstore.service.BookService;
+import dima.senko.bookstore.dto.book.BookDto;
+import dima.senko.bookstore.dto.book.BookSearchParametersDto;
+import dima.senko.bookstore.dto.book.CreateBookRequestDto;
+import dima.senko.bookstore.service.book.BookService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;

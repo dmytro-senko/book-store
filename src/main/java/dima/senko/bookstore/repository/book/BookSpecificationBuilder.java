@@ -5,7 +5,7 @@ import static dima.senko.bookstore.repository.book.spec.IsbnSpecification.ISBN;
 import static dima.senko.bookstore.repository.book.spec.PriceSpecification.PRICE;
 import static dima.senko.bookstore.repository.book.spec.TitleSpecification.TITLE;
 
-import dima.senko.bookstore.dto.BookSearchParametersDto;
+import dima.senko.bookstore.dto.book.BookSearchParametersDto;
 import dima.senko.bookstore.model.Book;
 import dima.senko.bookstore.repository.SpecificationBuilder;
 import dima.senko.bookstore.repository.SpecificationProviderManager;
